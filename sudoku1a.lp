@@ -9,7 +9,9 @@
 { sudoku(X, Y, 1..4) } = 1 :- X = 1..4, Y = 1..4.
 
 
-:- sudoku(X, Y, N), sudoku(X, Y', N'), Y != Y', N != N'. 
-:- sudoku(X, Y, N), sudoku(X', Y, N'), X != X', N != N'. 
+:- sudoku(X, Y, N), sudoku(X, Y', N'), Y != Y', N = N'. 
+:- sudoku(X, Y, N), sudoku(X', Y, N'), X != X', N = N'. 
+:- not sudoku(X, Y, N), initial(X, Y, N'), N = N'. 
+
 
 #show sudoku/3.
