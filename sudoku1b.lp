@@ -19,5 +19,5 @@
 :- not sudoku(X, Y, N), initial(X, Y, N'), N = N'. 
 
 
-% #show sudoku/3.
+#show sudoku/3.
 #show subgrid/3.
