@@ -6,6 +6,8 @@
 
 % Your implementation please...
 
+{ sudoku(X, Y, 1..4) } = 1 :- X = 1..4, Y = 1..4.
+
 
 :- sudoku(X, Y, N), sudoku(X, Y', N'), Y != Y', N != N'. 
 :- sudoku(X, Y, N), sudoku(X', Y, N'), X != X', N != N'. 
