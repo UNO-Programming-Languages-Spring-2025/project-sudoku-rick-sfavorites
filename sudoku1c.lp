@@ -16,7 +16,7 @@
 
 :- sudoku(X, Y, N), sudoku(X, Y', N'), Y != Y', N = N'. 
 :- sudoku(X, Y, N), sudoku(X', Y, N'), X != X', N = N'. 
-:- not sudoku(X, Y, N), initial(X, Y, N'), N = N'. 
+:- sudoku(X, Y, N), initial(X, Y, N'), N != N'. 
 :- sudoku(X, Y, N), sudoku(X', Y', N'), subgrid(X, Y, G), subgrid(X', Y', G'), G = G', N = N', X != X', Y != Y'.
 
 
